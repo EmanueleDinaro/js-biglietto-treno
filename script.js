@@ -5,7 +5,10 @@ console.log(`Distanza da voler percorrere: ${distance}`)
 // 2 chiedere all'utente l'età del passeggero.
 const askedAge = Number(prompt("Quanti anni hai?"))
 console.log(`L'età del passeggerò è ${askedAge}`)
+
 // 3 calcolare il PREZZO TOTALE del biglietto definito in base al rapporto tra 0.21€ al km
+const ticketPrice = distance * 0.21;
+
 //  - SE età < 18 applicare uno sconto al PREZZO TOTALE del 20%
 //      - ALTRIMENTI SE età > 65 applicare uno sconto al PREZZO TOTALE del 40% 
 //      - ALTRIMENTI prezzo totale
