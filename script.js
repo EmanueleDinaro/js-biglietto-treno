@@ -12,4 +12,19 @@ const ticketPrice = distance * 0.21;
 //  - SE età < 18 applicare uno sconto al PREZZO TOTALE del 20%
 //      - ALTRIMENTI SE età > 65 applicare uno sconto al PREZZO TOTALE del 40% 
 //      - ALTRIMENTI prezzo totale
-// - Alert del prezzo finale(con massimo due decimali, per indicare i cent.).
+//      - Alert del prezzo finale(con massimo due decimali, per indicare i cent.).
+let youngTicketPrice;
+let seniorTicketPrice;
+
+if (askedAge >= 0 && askedAge < 18) {
+        youngTicketPrice = ticketPrice - (ticketPrice * 20) / 100
+        alert(`Sei minorenne hai diritto ad uno sconto del 20%, per cui il prezzo del tuo biglietto è di €${youngTicketPrice.toFixed(2)}`)
+        console.log(`Sei minorenne hai diritto ad uno sconto del 20%, per cui il prezzo del tuo biglietto è di €${youngTicketPrice.toFixed(2)}`)
+} else if (askedAge >= 65) {
+        seniorTicketPrice = ticketPrice - (ticketPrice * 40) / 100
+        alert(`Sei over 65 hai diritto ad uno sconto del 40%, per cui il prezzo del tuo biglietto è di €${seniorTicketPrice.toFixed(2)}`)
+        console.log(`Sei over 65 hai diritto ad uno sconto del 40%, per cui il prezzo del tuo biglietto è di €${seniorTicketPrice.toFixed(2)}`)
+} else {
+        alert(`Il prezzo del tuo biglietto è di €${ticketPrice.toFixed(2)}`)
+        console.log(`Sei uno sfigato, per cui il prezzo del tuo biglietto è intero: €${ticketPrice.toFixed(2)}`)
+}
